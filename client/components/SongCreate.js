@@ -26,8 +26,6 @@ class SongCreate extends Component {
   }
 
   render() {
-    // console.log("STATE", this.state);
-
     const { title } = this.state;
     return (
       <div>

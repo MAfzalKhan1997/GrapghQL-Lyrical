@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router";
-import gql from "graphql-tag";
 import { graphql } from "react-apollo";
 
 import LyricCreate from "./LyricCreate";

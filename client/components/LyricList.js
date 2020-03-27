@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router";
 import gql from "graphql-tag";
 import { graphql } from "react-apollo";
-import { optimistic } from "apollo-client/optimistic-data/store";
 
 class LyricList extends Component {
   onLike(id, likes) {
-    console.log("Like song");
     this.props.mutate({
       variables: { id },
       optimisticResponse: {
@@ -18,7 +15,6 @@ class LyricList extends Component {
         }
       }
     });
-    // .then(() => this.props.data.refetch());
   }
 
   renderLyrics() {
@@ -57,4 +53,3 @@ const mutation = gql`
 `;
 
 export default graphql(mutation)(LyricList);
-// graphql(fetchLyrics)
